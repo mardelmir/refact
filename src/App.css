@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding: 0 auto;
   text-align: center;
-  background: linear-gradient(to left, rgb(143, 143, 143), white,  rgb(143, 143, 143));
+  background: linear-gradient(to left, #b26127cd, #b261273b, white, #b261273b, #b26127cd);
 }
 
 .Header {
@@ -16,60 +16,66 @@
 .Header h1 {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 30px;
-  
-}
-
-.datosEmpleados {
-  display: inline;
-}
-
-.datosEmpleados > div {
-  display: inline-block;
+  margin-top: 40px;
 }
 
 .logo {
-  position: absolute;
+  position: fixed;
   height: 6em;
   padding: 1.5em;
-  border-radius: 50px;
+  border-radius: 70% 60% 60% 60%/ 60% 65% 70% 70%;
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #ffd035);
+}
+
+.calculator{
+  margin: 30px;
+}
+
+.calculator img {
+  width: 35px;
+}
+
+.calculator>button:first-of-type {
+  margin-right: 40px;
+}
+
+.calculator input {
+  border: 1px solid #452402;
+  border-radius: 4px;
+  padding: 5px;
+  margin: 0px 5px;
+}
+
+.calculator input:focus{
+  outline: 1.5px solid #934a00;
+}
+
+.employees {
+  display: block;
+  margin: 40px;
+}
+
+.employees>div {
+  display: inline-block;
 }
 
 .Footer ul {
   list-style: none;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
 .card {
-  padding: 20px;
   border: solid black 1px;
   border-radius: 5px;
   margin: 10px;
   width: 250px;
-  height: 180px;
   background-color: white;
 }
 
-span{
+span {
   font-weight: 600;
 }
-

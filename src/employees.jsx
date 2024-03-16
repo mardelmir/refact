@@ -41,8 +41,8 @@ const storage = employees.map((employee, i) =>
 
 function Employees() {
     return (
-        <div className="datosEmpleados">
-            <h2>EMPLOYEES</h2>
+        <div className="employees">
+            <h2>EMPLEADOS</h2>
             {storage}
         </div>
         )

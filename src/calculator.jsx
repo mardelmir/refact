@@ -7,15 +7,16 @@ function Calculator() {
 
     return (
         <div className='calculator'>
-            <h2>CALCULATOR</h2>
+            <h2>CALCULADORA</h2>
             <form>
-                <input type='number' value={num1} onChange={(e) => setNum1(+e.target.value)} placeholder="Insert First Number" />
-                <input type='number' value={num2} onChange={(e) => setNum2(+e.target.value)} placeholder="Insert Second Number"/>
+                <input type='number' value={num1} onChange={(e) => setNum1(+e.target.value)} placeholder="Primer número" />
+                <input type='number' value={num2} onChange={(e) => setNum2(+e.target.value)} placeholder="Segundo número" />
             </form>
-            <button onClick={() => setResult(num1 + num2)}>Sumar</button>
-            <button onClick={() => setResult(num1 - num2)}>Restar</button>
-            <button onClick={() => setResult(num1 * num2)}>Multiplicar</button>
-            <button onClick={() => setResult(num1 / num2)}>Dividir</button>
+            <button onClick={() => { setNum1(''); setNum2(''); setResult(0) }}><img src='./src/assets/reset.png'/></button>
+            <button onClick={() => setResult(num1 + num2)}><img src='./src/assets/sumar.png'/></button>
+            <button onClick={() => setResult(num1 - num2)}><img src='./src/assets/restar.png'/></button>
+            <button onClick={() => setResult(num1 * num2)}><img src='./src/assets/multiplicar.png'/></button>
+            <button onClick={() => num2 !== 0 ? setResult(num1 / num2) : setResult('No se puede dividir por cero')}><img src='./src/assets/dividir.png'/></button>
             <div id='result'>Resultado: {result}</div>
         </div>)
 }
